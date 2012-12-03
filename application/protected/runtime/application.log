@@ -11176,3 +11176,189 @@ in /home/marin/excelling/application/index.php (13)
 2012/12/03 14:24:11 [trace] [system.CModule] Loading "clientScript" application component
 in /home/marin/excelling/application/protected/controllers/FilesController.php (239)
 in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:39 [trace] [system.CModule] Loading "log" application component
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:39 [trace] [system.CModule] Loading "request" application component
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:39 [trace] [system.CModule] Loading "urlManager" application component
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:39 [trace] [system.web.filters.CFilterChain] Running filter FilesController.filteraccessControl()
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:39 [trace] [system.CModule] Loading "user" application component
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:39 [trace] [system.CModule] Loading "session" application component
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:39 [trace] [system.CModule] Loading "db" application component
+in /home/marin/excelling/application/protected/models/Master.php (25)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (49)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:39 [trace] [system.db.CDbConnection] Opening DB connection
+in /home/marin/excelling/application/protected/models/Master.php (25)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (49)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:39 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `masterList`
+in /home/marin/excelling/application/protected/models/Master.php (25)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (49)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:39 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `masterList`
+in /home/marin/excelling/application/protected/models/Master.php (25)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (49)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:39 [trace] [system.db.ar.CActiveRecord] Master.findAll()
+in /home/marin/excelling/application/protected/controllers/FilesController.php (49)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `masterList` `t` LIMIT 1
+in /home/marin/excelling/application/protected/controllers/FilesController.php (49)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:39 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `masterLists`
+in /home/marin/excelling/application/protected/models/MasterLists.php (25)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (50)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:39 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `masterLists`
+in /home/marin/excelling/application/protected/models/MasterLists.php (25)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (50)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:39 [trace] [system.db.ar.CActiveRecord] MasterLists.findAll()
+in /home/marin/excelling/application/protected/controllers/FilesController.php (50)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `masterLists` `t` ORDER BY id desc
+in /home/marin/excelling/application/protected/controllers/FilesController.php (50)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:39 [trace] [system.db.ar.CActiveRecord] lazy loading MasterLists.user
+in /home/marin/excelling/application/protected/views/files/master.php (66)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (51)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:39 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `users`
+in /home/marin/excelling/application/protected/views/files/master.php (66)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (51)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:39 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `users`
+in /home/marin/excelling/application/protected/views/files/master.php (66)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (51)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT `user`.`id` AS `t1_c0`, `user`.`email` AS `t1_c1`, `user`.`firstName` AS `t1_c2`, `user`.`lastName` AS `t1_c3`, `user`.`password` AS `t1_c4`, `user`.`salt` AS `t1_c5` FROM `users` `user`  WHERE (`user`.`id`=:ypl0)
+in /home/marin/excelling/application/protected/views/files/master.php (66)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (51)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:39 [trace] [system.CModule] Loading "widgetFactory" application component
+in /home/marin/excelling/application/protected/views/layouts/column1.php (2)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (51)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:39 [trace] [system.CModule] Loading "clientScript" application component
+in /home/marin/excelling/application/protected/controllers/FilesController.php (51)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.CModule] Loading "log" application component
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.CModule] Loading "request" application component
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.CModule] Loading "urlManager" application component
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.web.filters.CFilterChain] Running filter FilesController.filteraccessControl()
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.CModule] Loading "user" application component
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.CModule] Loading "session" application component
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.CModule] Loading "db" application component
+in /home/marin/excelling/application/protected/models/MasterLists.php (25)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (219)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.db.CDbConnection] Opening DB connection
+in /home/marin/excelling/application/protected/models/MasterLists.php (25)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (219)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `masterLists`
+in /home/marin/excelling/application/protected/models/MasterLists.php (25)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (219)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `masterLists`
+in /home/marin/excelling/application/protected/models/MasterLists.php (25)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (219)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.db.ar.CActiveRecord] MasterLists.findAll()
+in /home/marin/excelling/application/protected/controllers/FilesController.php (219)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `masterLists` `t`
+in /home/marin/excelling/application/protected/controllers/FilesController.php (219)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.db.ar.CActiveRecord] MasterLists.delete()
+in /home/marin/excelling/application/protected/models/MasterLists.php (106)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (221)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.db.ar.CActiveRecord] MasterLists.deleteByPk()
+in /home/marin/excelling/application/protected/models/MasterLists.php (106)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (221)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `masterLists` WHERE `masterLists`.`id`=84
+in /home/marin/excelling/application/protected/models/MasterLists.php (106)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (221)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `masterList`
+in /home/marin/excelling/application/protected/models/Master.php (25)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (223)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `masterList`
+in /home/marin/excelling/application/protected/models/Master.php (25)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (223)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.db.ar.CActiveRecord] Master.deleteAll()
+in /home/marin/excelling/application/protected/controllers/FilesController.php (223)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `masterList`
+in /home/marin/excelling/application/protected/controllers/FilesController.php (223)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.CModule] Loading "log" application component
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.CModule] Loading "request" application component
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.CModule] Loading "urlManager" application component
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.web.filters.CFilterChain] Running filter FilesController.filteraccessControl()
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.CModule] Loading "user" application component
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.CModule] Loading "session" application component
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.CModule] Loading "db" application component
+in /home/marin/excelling/application/protected/models/Master.php (25)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (49)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.db.CDbConnection] Opening DB connection
+in /home/marin/excelling/application/protected/models/Master.php (25)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (49)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `masterList`
+in /home/marin/excelling/application/protected/models/Master.php (25)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (49)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `masterList`
+in /home/marin/excelling/application/protected/models/Master.php (25)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (49)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.db.ar.CActiveRecord] Master.findAll()
+in /home/marin/excelling/application/protected/controllers/FilesController.php (49)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `masterList` `t` LIMIT 1
+in /home/marin/excelling/application/protected/controllers/FilesController.php (49)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.db.CDbCommand] Querying SQL: SHOW COLUMNS FROM `masterLists`
+in /home/marin/excelling/application/protected/models/MasterLists.php (25)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (50)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `masterLists`
+in /home/marin/excelling/application/protected/models/MasterLists.php (25)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (50)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.db.ar.CActiveRecord] MasterLists.findAll()
+in /home/marin/excelling/application/protected/controllers/FilesController.php (50)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `masterLists` `t` ORDER BY id desc
+in /home/marin/excelling/application/protected/controllers/FilesController.php (50)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.CModule] Loading "widgetFactory" application component
+in /home/marin/excelling/application/protected/views/layouts/column1.php (2)
+in /home/marin/excelling/application/protected/controllers/FilesController.php (51)
+in /home/marin/excelling/application/index.php (13)
+2012/12/03 14:26:41 [trace] [system.CModule] Loading "clientScript" application component
+in /home/marin/excelling/application/protected/controllers/FilesController.php (51)
+in /home/marin/excelling/application/index.php (13)
