@@ -266,13 +266,46 @@ class FilesController extends Controller
 		if ($list->status == 'AUTO') {
 		  foreach($retailEntries as $entry) {
 		    if (empty($entry->code)) {
+		      $identicalFound = false;
 		      $similarMasters = array();
 		      foreach ($masterList as $masterEntry) {
-		        if (ParserHelper::namesArePercentSimilar($entry->customer, $masterEntry->retailerName, 60)) {
-		          $similarMasters[] = $masterEntry;
+		        if (ParserHelper::namesAreSame($entry->customer, $masterEntry->retailerName) ||
+	              ParserHelper::followUnivException($entry->customer, $masterEntry->retailerName)) {
+	            //store is campus local
+	            if ($masterEntry->distributionChannel == 'CAMP') {
+	              if ($entry->getZip() == substr($masterEntry->zip,0,5)) {
+	                if (!RetailEntries::setCodeAndSave($entry, $masterEntry->retailerCode)) {
+                    echo 'Found identical CAMPUS LOCAL entry in master list for: '.$entry->customer. ' --Failed saving the identical code.';
+		                return;
+                  }
+                  else {
+                    $identicalFound = true;
+                  }
+	                break;
+	              }
+	            }
+	            //not campus local
+	            else {
+	              if (!RetailEntries::setCodeAndSave($entry, $masterEntry->retailerCode)) {
+                  echo 'Found identical entry in master list for: '.$entry->customer. ' --Failed saving the identical code.';
+		              return;
+                }
+                else {
+                  $identicalFound = true;
+                }
+                break;
+	            }
+	          }
+	          else {
+		          if (ParserHelper::namesArePercentSimilar($entry->customer, $masterEntry->retailerName, 60)) {
+		            $similarMasters[] = $masterEntry;
+		          }
 		        }
 		      }
-		      if (empty($similarMasters)) {
+		      if ($identicalFound == true) {
+		        //do nothing, keep looping
+		      }
+		      else if (empty($similarMasters)) {
 		        if ($entry->generateNewCodeAndSave()) {
 		          if ($entry->addMigrationEntry() == false) {
 		            echo 'Error while adding migration list entry for: '.$entry->customer;
