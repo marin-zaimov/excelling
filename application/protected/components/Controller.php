@@ -8,7 +8,7 @@ class Controller extends CController
 
   public function init()
 	{
-	  ini_set('max_execution_time', 2400); //40 min
+	  ini_set('max_execution_time', 3600); //1 hour
 	  ini_set('memory_limit', '2G'); //2 gigabytes
 	}
 	/**

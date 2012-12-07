@@ -56,7 +56,8 @@
     <th>Name</th>
     <th>Date Uploaded</th>
     <th>Uploaded By</th>
-    <th># entries</th>
+    <th># entries at upload</th>
+    <th># entries now</th>
     <th>Currently Used</th>
   </tr>
   <?php foreach($masterLists as $m): ?>
@@ -64,7 +65,8 @@
     <td><?php echo $m->filename; ?></td>
     <td><?php echo date('m-d-Y h:i:s a', strtotime($m->date)); ?></td>
     <td><?php echo $m->user->firstName .' '.$m->user->lastName; ?></td>
-    <td><?php echo $m->numRows; ?></td>
+    <td><?php echo $m->numRows -1; ?></td>
+    <td><?php echo $numRowsNow; ?></td>
     <td>
       <?php if($currentMaster == $m->id): ?>
       <span class="text-success">Current</span>

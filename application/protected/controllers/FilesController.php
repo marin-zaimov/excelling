@@ -48,7 +48,12 @@ class FilesController extends Controller
 	{
 	  $currentMaster = Master::model()->findAll(array('limit' => 1));
 	  $masterLists = MasterLists::model()->findAll(array('order'=>'id desc'));
-		$this->render('master', array('masterLists' => $masterLists, 'currentMaster' => $currentMaster[0]->masterListId));
+	  $currentId = null;
+	  if (!empty($currentMaster)) {
+	    $currentId = $currentMaster[0]->masterListId;
+	  }
+	  $numRowsNow = Master::model()->count();
+		$this->render('master', array('masterLists' => $masterLists, 'currentMaster' => $currentId, 'numRowsNow' => $numRowsNow));
 	}
 
 	public function actionNewMaster()
@@ -207,6 +212,7 @@ class FilesController extends Controller
     foreach ($models as $m) {
       $attr = $m->attributes;
       unset($attr['retailListId']);
+      unset($attr['id']);
       $data[] = array_values($attr);
     }
     $filename = 'Migration-'.$list->filename;
