@@ -43,9 +43,8 @@ class Master extends IMGModel
 		return array(
 			array('retailerCode, retailerName, origin, masterListId', 'required'),
 			array('masterListId', 'numerical', 'integerOnly'=>true),
-			array('retailerCode, city, state', 'length', 'max'=>45),
-			array('retailerName, distributionChannel, origin', 'length', 'max'=>255),
-			array('zip', 'length', 'max'=>10),
+			array('retailerCode', 'length', 'max'=>45),
+			array('retailerName, distributionChannel, origin, city, state, zip', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('retailerCode, retailerName, city, state, zip, distributionChannel, origin, masterListId', 'safe', 'on'=>'search'),

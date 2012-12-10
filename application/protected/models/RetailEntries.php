@@ -47,9 +47,8 @@ class RetailEntries extends IMGModel
 		return array(
 			array('retailListId', 'required'),
 			array('retailListId', 'numerical', 'integerOnly'=>true),
-			array('customer, street', 'length', 'max'=>255),
-			array('city, state, customerType, code', 'length', 'max'=>45),
-			array('zip', 'length', 'max'=>10),
+			array('customer, street, city, state, zip, customerType', 'length', 'max'=>255),
+			array('code', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('customer, street, city, state, zip, customerType, code, id, retailListId', 'safe', 'on'=>'search'),

@@ -58,8 +58,8 @@ class UploadListEntries extends IMGModel
 		return array(
 			array('retailListId, retailCode, company', 'required'),
 			array('retailListId', 'numerical', 'integerOnly'=>true),
-			array('retailCode, firstname, lastName, city, state, zip, phone, fax, username', 'length', 'max'=>45),
-			array('company, storeNumber, retailerType, subRetailer, address, address2, country, password', 'length', 'max'=>255),
+			array('retailCode, firstname, lastName, phone, fax, username', 'length', 'max'=>45),
+			array('company, storeNumber, retailerType, subRetailer, address, city, state, zip, address2, country, password', 'length', 'max'=>255),
 			array('url', 'length', 'max'=>1024),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
