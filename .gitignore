@@ -1,2 +1,3 @@
 *~
-maui/application/assets/*
+application/assets/*
+application/protected/runtime/*

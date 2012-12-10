@@ -227,6 +227,7 @@ class FilesController extends Controller
 		  $l->deleteWithFile();
 		}
 		Master::model()->deleteAll();
+		array_map('unlink', glob(Yii::app()->params['masterRoot'].'*.csv"));
 		$this->redirect('master');
 	}
 	
