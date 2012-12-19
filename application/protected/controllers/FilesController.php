@@ -271,7 +271,8 @@ class FilesController extends Controller
 		      $similarMasters = array();
 		      foreach ($masterList as $masterEntry) {
 		        if (ParserHelper::namesAreSame($entry->customer, $masterEntry->retailerName) ||
-	              ParserHelper::followUnivException($entry->customer, $masterEntry->retailerName)) {
+	              ParserHelper::followUnivException($entry->customer, $masterEntry->retailerName) ||
+	              ParserHelper::namesArePercentSimilar($entry->customer, $masterEntry->retailerName, 90)) {
 	            //store is campus local
 	            if ($masterEntry->distributionChannel == 'CAMP') {
 	              if ($entry->getZip() == substr($masterEntry->zip,0,5)) {
@@ -298,7 +299,7 @@ class FilesController extends Controller
 	            }
 	          }
 	          else {
-		          if (ParserHelper::namesArePercentSimilar($entry->customer, $masterEntry->retailerName, 60)) {
+		          if (ParserHelper::namesArePercentSimilar($entry->customer, $masterEntry->retailerName, 75)) {
 		            $similarMasters[] = $masterEntry;
 		          }
 		        }

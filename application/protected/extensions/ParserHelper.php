@@ -166,6 +166,19 @@ class ParserHelper
     $lengthOne = strlen($nameOne);
     $lengthTwo = strlen($nameTwo);
     $lengthSub = strlen($subsequence);
+    
+    //check ratio of two word lengths
+    if ($lengthOne > $lengthTwo) {
+      $nameRatio = $lengthTwo/$lengthOne;
+    }
+    else {
+      $nameRatio = $lengthOne/$lengthTwo;
+    }
+    if ($nameRatio <= $ratio) {
+      return false;
+    }
+    
+    
     if ($lengthOne > 0) {
       if ($lengthSub/$lengthOne >= $ratio) {
         return true;
